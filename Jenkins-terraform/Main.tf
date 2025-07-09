@@ -59,7 +59,7 @@ resource "aws_security_group" "Jenkins-sg" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0df4b2961410d4cff"
+  ami                    = "ami-021a584b49225376d"
   instance_type          = "t2.medium"
   key_name               = "swapna"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
@@ -71,6 +71,6 @@ resource "aws_instance" "web" {
   }
 
   root_block_device {
-    volume_size = 30
+    volume_size = 29
   }
 }
